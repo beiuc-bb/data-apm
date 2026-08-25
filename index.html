@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>APM Bekasi Barat</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff9365">
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #faf9fb;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <iframe
+    src="https://apm-bb.s.gy/pendataan"
+    allow="clipboard-read; clipboard-write"
+  ></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+
+</body>
+</html>
